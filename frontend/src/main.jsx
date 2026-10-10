@@ -7,11 +7,10 @@ import NewLesson from "./pages/NewLesson.jsx";
 import Workspace from "./pages/Workspace.jsx";
 import Chat from "./pages/Chat.jsx";
 import Mcq from "./pages/Mcq.jsx";
-import Figure from "./pages/Figure.jsx";
 import "./styles.css";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
@@ -19,7 +18,6 @@ createRoot(document.getElementById("root")).render(
         <Route path="/lesson/:id" element={<Workspace />} />
         <Route path="/lesson/:id/chat" element={<Chat />} />
         <Route path="/lesson/:id/mcq" element={<Mcq />} />
-        <Route path="/lesson/:id/figure" element={<Figure />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>

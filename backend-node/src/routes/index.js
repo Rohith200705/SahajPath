@@ -33,9 +33,6 @@ router.post("/chat", chat.ask);
 // Adaptive (A+C) loop — submit a comprehension answer, get adapted level + re-explanation.
 router.post("/comprehension/evaluate", learn.evaluate);
 
-// Describe an uploaded diagram/figure for blind learners (+ spoken).
-router.post("/describe-figure", upload.single("file"), learn.describeFigure);
-
 // Supported languages for frontend dropdowns.
 router.get("/languages", (req, res) => {
   const names = {

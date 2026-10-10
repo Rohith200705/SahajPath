@@ -31,7 +31,6 @@ export default function Mcq() {
         <Link className="tab" to={`/lesson/${id}`}>Lesson</Link>
         <Link className="tab" to={`/lesson/${id}/chat`}>💬 Q&A</Link>
         <Link className="tab active" to={`/lesson/${id}/mcq`}>✅ MCQ</Link>
-        <Link className="tab" to={`/lesson/${id}/figure`}>🖼️ Figure</Link>
       </div>
       <h1>Comprehension check</h1>
       <p className="muted">Answer adapts your reading level — wrong drops it and re-explains, right nudges up.</p>

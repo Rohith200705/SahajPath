@@ -23,10 +23,19 @@ export default function NewLesson() {
   // Step 1: extract + check length. Short content transforms directly; long content
   // shows a chunk picker so the user transforms one manageable part at a time.
   async function prepare() {
+    // Validate input client-side so we never fire an empty request (avoids 422 noise).
+    if ((type === "text" || type === "webpage") && !content.trim()) {
+      setStatus(type === "webpage" ? "Enter a URL first." : "Enter some lesson text first.");
+      return;
+    }
+    if ((type === "image" || type === "pdf") && !file) {
+      setStatus("Choose a file first.");
+      return;
+    }
     setBusy(true); setChunks(null); setStatus("reading content…");
     try {
       const p = await api.preview(type, content, file);
-      if (p.error) { setStatus("error: " + p.error); setBusy(false); return; }
+      if (p.error) { setStatus("Couldn't read that: " + p.error); setBusy(false); return; }
       if (p.needsChunking) {
         setChunks(p.chunks);
         setStatus(`Content is long (${p.totalChars} chars). Pick a part to transform.`);

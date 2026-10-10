@@ -21,7 +21,6 @@ export default function Workspace() {
       <Link className="tab active" to={`/lesson/${id}`}>Lesson</Link>
       <Link className="tab" to={`/lesson/${id}/chat`}>💬 Q&A</Link>
       <Link className="tab" to={`/lesson/${id}/mcq`}>✅ MCQ</Link>
-      <Link className="tab" to={`/lesson/${id}/figure`}>🖼️ Figure</Link>
     </div>
   );
 
