@@ -1,0 +1,20 @@
+# Core server
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+requests
+
+# LLM (Groq, OpenAI-compatible)
+openai
+
+# Text-to-speech
+gTTS
+
+# OCR / PDF / scraping (optional — text & webpage paths work without them;
+# needed for image & PDF input. On Python 3.14 install the latest wheels.)
+Pillow
+pytesseract
+PyMuPDF
+trafilatura
+beautifulsoup4

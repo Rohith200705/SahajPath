@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Secrets — NEVER commit
+.env
+shared/.env
+*.env.local
+
+# Generated files
+storage/
+*.mp3
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# build output
+frontend/dist/

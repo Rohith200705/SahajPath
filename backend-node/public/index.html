@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SahajPath — Backend Test Console</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+  header { background: #1e293b; padding: 16px 24px; border-bottom: 2px solid #38bdf8; }
+  header h1 { margin: 0; font-size: 20px; } header small { color: #94a3b8; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; margin-left:8px; }
+  .ok { background:#16a34a; } .bad { background:#dc2626; } .wait { background:#ca8a04; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 24px; max-width: 1300px; margin: 0 auto; }
+  .card { background:#1e293b; border:1px solid #334155; border-radius:12px; padding:16px; }
+  .card h2 { margin:0 0 12px; font-size:15px; color:#38bdf8; }
+  label { display:block; font-size:12px; color:#94a3b8; margin:8px 0 4px; }
+  input, textarea, select { width:100%; padding:8px; border-radius:8px; border:1px solid #475569; background:#0f172a; color:#e2e8f0; font-size:13px; }
+  textarea { min-height:70px; resize:vertical; }
+  button { margin-top:10px; padding:9px 14px; border:none; border-radius:8px; background:#38bdf8; color:#07263a; font-weight:600; cursor:pointer; font-size:13px; }
+  button:hover { background:#7dd3fc; } button.alt { background:#475569; color:#e2e8f0; }
+  pre { background:#020617; padding:10px; border-radius:8px; font-size:12px; max-height:260px; overflow:auto; white-space:pre-wrap; word-break:break-word; }
+  .row { display:flex; gap:8px; } .row > * { flex:1; }
+  audio { width:100%; margin-top:8px; }
+  .muted { color:#64748b; font-size:11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SahajPath — Backend Test Console <span id="health" class="pill wait">checking…</span></h1>
+  <small>Exercises every Node gateway endpoint. Base: <code id="base"></code> · AI docs: <a href="http://localhost:8000/docs" style="color:#7dd3fc">Python /docs</a></small>
+</header>
+<main>
+  <!-- cards injected below -->
+</main>
+<script src="app.js"></script>
+</body>
+</html>

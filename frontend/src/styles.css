@@ -1,0 +1,64 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; }
+
+.app { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar { width: 260px; flex-shrink: 0; background: #1e293b; border-right: 1px solid #334155; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.brand { font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.badge { font-size: 10px; padding: 2px 8px; border-radius: 999px; }
+.badge.ok { background: #16a34a; } .badge.bad { background: #dc2626; } .badge.wait { background: #ca8a04; }
+.newbtn { display: block; text-align: center; background: #38bdf8; color: #07263a; font-weight: 600; padding: 9px; border-radius: 8px; text-decoration: none; }
+.newbtn:hover { background: #7dd3fc; }
+.libhdr { font-size: 11px; text-transform: uppercase; color: #64748b; margin-top: 8px; letter-spacing: 1px; }
+.lessons { overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.lessonitem { background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 8px 10px; text-decoration: none; color: #e2e8f0; }
+.lessonitem:hover { border-color: #38bdf8; }
+.lessontitle { font-size: 13px; margin-bottom: 2px; }
+
+/* Content */
+.content { flex: 1; overflow-y: auto; }
+.page { max-width: 860px; margin: 0 auto; padding: 28px; }
+.page h1 { font-size: 22px; margin: 0 0 10px; }
+.cta { display: inline-block; margin-top: 10px; background: #38bdf8; color: #07263a; font-weight: 600; padding: 10px 18px; border-radius: 8px; text-decoration: none; }
+
+label { display: block; font-size: 12px; color: #94a3b8; margin: 12px 0 4px; }
+input, textarea, select { width: 100%; padding: 9px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: #e2e8f0; font-size: 14px; }
+textarea { min-height: 110px; resize: vertical; }
+.chk { display: flex; gap: 6px; align-items: center; }
+.chk input { width: auto; }
+.row { display: flex; gap: 12px; } .row > * { flex: 1; }
+button { margin-top: 12px; padding: 10px 18px; border: none; border-radius: 8px; background: #38bdf8; color: #07263a; font-weight: 600; cursor: pointer; font-size: 14px; }
+button:hover { background: #7dd3fc; } button:disabled { opacity: .5; cursor: not-allowed; }
+button.alt { background: #475569; color: #e2e8f0; }
+
+.muted { color: #64748b; font-size: 13px; }
+
+/* Tabs */
+.tabs { display: flex; gap: 6px; margin-bottom: 16px; border-bottom: 1px solid #334155; padding-bottom: 8px; flex-wrap: wrap; }
+.tab { padding: 7px 14px; border-radius: 8px; text-decoration: none; color: #94a3b8; font-size: 14px; }
+.tab:hover { background: #1e293b; }
+.tab.active { background: #38bdf8; color: #07263a; font-weight: 600; }
+
+/* Boxes */
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.box { background: #1e293b; border: 1px solid #334155; padding: 14px; border-radius: 10px; font-size: 14px; line-height: 1.55; white-space: pre-wrap; }
+.box h4 { margin: 0 0 8px; font-size: 12px; color: #38bdf8; }
+audio { width: 100%; margin-top: 10px; }
+.flag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 6px; margin-bottom: 8px; }
+.flag.low { background: #7c2d12; color: #fed7aa; } .flag.good { background: #14532d; color: #bbf7d0; }
+.question { font-size: 16px; margin: 14px 0; }
+.opt { display: flex; gap: 8px; align-items: center; margin: 6px 0; font-size: 14px; }
+.opt input { width: auto; }
+
+/* Chat (ChatGPT-style) */
+.chatpage { display: flex; flex-direction: column; height: calc(100vh - 0px); }
+.chatlog { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding: 10px 0; }
+.bubble { max-width: 78%; padding: 11px 14px; border-radius: 14px; font-size: 14px; line-height: 1.5; white-space: pre-wrap; }
+.bubble.user { align-self: flex-end; background: #38bdf8; color: #07263a; border-bottom-right-radius: 4px; }
+.bubble.assistant { align-self: flex-start; background: #1e293b; border: 1px solid #334155; border-bottom-left-radius: 4px; }
+.composer { display: flex; gap: 8px; align-items: center; border-top: 1px solid #334155; padding: 12px 0; }
+.composer input[type="text"], .composer input:not([type]) { flex: 1; }
+.composer select { width: auto; }
+.composer button { margin-top: 0; }
